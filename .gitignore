@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Editors
+.idea/
+.vscode/
+
+# ข้อมูลผู้ใช้ (ปกติเก็บที่ %APPDATA%\LinkPad แต่กันไว้เผื่อตั้ง LINKPAD_HOME ในโฟลเดอร์โปรเจ็ค)
+cache/
+library.json
+settings.json
+*.tmp
+.env

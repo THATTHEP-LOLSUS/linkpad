@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "linkpad"
+dynamic = ["version"]
+description = "Soundboard that plays YouTube/TikTok links and local files into a virtual microphone (Discord, games)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "THATTHEP-LOLSUS" }]
+keywords = ["soundboard", "discord", "youtube", "tiktok", "virtual-microphone", "yt-dlp"]
+dependencies = [
+    "customtkinter>=5.2",
+    "sounddevice>=0.4.6",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "yt-dlp",
+    "imageio-ffmpeg>=0.4.9",
+    "keyboard>=0.13.5",
+    "pillow>=9.0",
+]
+
+[project.gui-scripts]
+linkpad = "linkpad.__main__:main"
+
+[tool.setuptools]
+packages = ["linkpad"]
+
+[tool.setuptools.package-data]
+linkpad = ["assets/*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "linkpad.__version__" }
